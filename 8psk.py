@@ -60,11 +60,11 @@ plt.ylabel('$P_e$')
 plt.title('P_e')
 plt.legend()
 plt.grid()
-'''
+
 #if using termux
 plt.savefig('./figs/8psk.pdf')
 plt.savefig('./figs/8psk.eps')
 subprocess.run(shlex.split("termux-open ./figs/8psk.pdf"))
 #else
-'''
+
 plt.show()
