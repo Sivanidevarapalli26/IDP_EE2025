@@ -62,9 +62,9 @@ plt.legend()
 plt.grid()
 
 #if using termux
-plt.savefig('./figs/8psk.pdf')
-plt.savefig('./figs/8psk.eps')
-subprocess.run(shlex.split("termux-open ./figs/8psk.pdf"))
+plt.savefig('./figs/ee18btech11012.pdf')
+plt.savefig('./figs/ee18btech11012.eps')
+subprocess.run(shlex.split("termux-open ./figs/ee18btech11012.pdf"))
 #else
 
 plt.show()
