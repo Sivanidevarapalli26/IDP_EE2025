@@ -72,7 +72,7 @@ where \textbf{ s$\in$ \{$s_0$, $s_1$, $s_2$, $s_3$,$s_4$,$s_5$,$s_6$,$s_7$\}}
 \end{align}
 
 \begin{figure}[!ht]
-                \resizebox{\columnwidth}{!}{\input{./figs/ee18btech11012_constellation.tex}}
+                \resizebox{\columnwidth}{!}{\input{8Psk_c.tex}}
 \label{fig:ee18btech11012_fig1}
 \caption{Constellation diagram}
 \end{figure}
@@ -93,7 +93,7 @@ $s_0$ denote bits 000, $s_1$ denote bits 001, $s_2$ denote bits 011,$s_3$ denote
 
 \begin{figure}[!ht]
 
-                \resizebox{\columnwidth}{!}{\input{./figs/ee18btech11012_decision.tex}}
+                \resizebox{\columnwidth}{!}{\input{8Psk_d.tex}}
 
 \label{fig:ee18btech11012_fig3}
 \caption{decision regions}
@@ -172,29 +172,16 @@ Substituting the values of $s_{0}$,$s_{1}$,....$s_{7}$ in the above and eliminat
 \begin{align}
     \myvec{(1-\frac{1}{\sqrt{2}})\\\frac{1}{\sqrt{2}}}^T\myvec{y_{1}\\y_{2}} > 0
 \end{align}
-yielding \abs{y_{2}} < (\sqrt{2}-1)$y_{1}$ \\i.e.,Red region(D1) is detected at the receiver.
+yielding $y_2+(\sqrt{2}-1)y_1>0$, $y_2-(\sqrt{2}-1)y_1<0$.\\i.e.,Red region(D1) is detected at the receiver.
 \\
-Similarly,\\
-From eq:\ref{eq:ee18btech11012_eq1}\\
-For detecting $s_1$, $y_2-(\sqrt{2}+1)y_1<0$ and $y_2-(\sqrt{2}-1)y_1>0$.\\
-$\Longleftrightarrow$ D2(blue) region is detected at receiver
-\\
-For detecting $s_2$,$y_2-(\sqrt{2}+1)y_1 >0$ and $y_2+(\sqrt{2}+1)y_1>0$\\$\Longleftrightarrow$ D3(pink) region at receiver. 
-\\
-For detecting $s_3$, $y_2+(\sqrt{2}-1)y_1>0$ and $y_2+(\sqrt{2}+1)y_1<0$.\\
-$\Longleftrightarrow$ D4(yellow) region at receiver.
-\\
-For detecting $s_4$, $y_2+(\sqrt{2}-1)y_1<0$ and $y_2-(\sqrt{2}-1)y_1>0$.\\
-$\Longleftrightarrow$ D5(green) region at receiver.
-\\
-For detecting $s_5$, $y_2-(\sqrt{2}+1)y_1>0$ and $y_2-(\sqrt{2}-1)y_1<0$.\\
-$\Longleftrightarrow$ D6(grey) region at receiver.
-\\
-For detecting $s_6$, $y_2-(\sqrt{2}+1)y_1<0$ and $y_2+(\sqrt{2}+1)y_1<0$.\\
-$\Longleftrightarrow$ D7(olive) region at receiver.
-\\
-For detecting $s_7$, $y_2+(\sqrt{2}-1)y_1<0$ and $y_2+(\sqrt{2}+1)y_1>0$.\\
-$\Longleftrightarrow$ D8(teal) region at receiver.
+
+
+Similarly for all symbols their decision region and their respective inequalities are given below in the table shown.
+\begin{figure}[!ht]
+                \resizebox{\columnwidth}{!}{\input{ee18btech11012_2.tex}}
+\label{fig:ee18btech11012_fig4}
+\caption{Decision regions and their inequalities}
+\end{figure}
 
 
 
