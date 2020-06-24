@@ -64,9 +64,7 @@ b2 =0
 symbol.append(mapping(b0,b1,b2))
 snr_db = np.linspace(0,9,10)
 snrlen=10
-M=8
-cons=np.tan(np.pi/M)
-cons1=1+(1/cons)**2
+
 err =[]
 
 print(len(symbol))
@@ -142,7 +140,7 @@ for k in range(0,snrlen):
 			t+=1;
 
 	err.append(1-(t/33334.0))
-	ber.append((qfunc(mp.sqrt((snr)/(cons1))))*2)
+	ber.append((qfunc(mp.sqrt((0.142*snr))))*2)
 
 plt.semilogy(snr_db.T,ber,label='Analysis')
 plt.semilogy(snr_db.T,err,'o',label='Sim')
@@ -152,10 +150,11 @@ plt.legend()
 plt.grid()
 
 #if using termux
-plt.savefig('./figs/qpsk.pdf')
-plt.savefig('./figs/qpsk.eps')
-subprocess.run(shlex.split("termux-open ./figs/qpsk.pdf"))
+plt.savefig('./figs/ee18btech11012.pdf')
+plt.savefig('./figs/ee18btech11012_1.eps')
+subprocess.run(shlex.split("termux-open ./figs/ee18btech11012.pdf"))
 #else
 
 plt.show()
+
 
